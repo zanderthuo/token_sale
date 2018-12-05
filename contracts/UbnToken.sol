@@ -1,4 +1,4 @@
-pragma  solidity ^0.4.2;
+pragma  solidity 0.4.24;
 
 
 contract UbnToken {
@@ -63,7 +63,7 @@ contract UbnToken {
 	  function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
 	  		require(_value <= balanceOf[_from]);
 	  		require(_value <= allowance[_from][msg.sender]);
-	  	//Require _fom has enough tokens
+	  	//Require _from has enough tokens
 	  	//Require allowance is big enough
 	  	//Change the balance
 	  	balanceOf[_from] -= _value;
